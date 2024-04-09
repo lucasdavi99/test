@@ -173,6 +173,6 @@ app.post("/send-email", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server on port ${PORT}`);
 });
