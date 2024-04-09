@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/orçamento.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script nomodule src=" https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Orçamento</title>
+</head>
+
+<body>
+    <form method="post" class="form">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <h1 class="text-center">Meu orçamento</h1>
+        <!-- Barra de progresso -->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+
+        </div>
+
+        <!-- Passo 1 do formulário: Informações Pessoais -->
+        <div class="form-step form-step-active">
+            <div class="input-group">
+                <input type="text" name="fullName" id="fullName" required />
+                <label for="fullName">Nome Completo</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="cpf" id="cpf" required />
+                <label for="cpf">CPF</label>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" id="email" required />
+                <label for="email">E-mail</label>
+            </div>
+            <div class="input-group">
+                <input type="tel" name="phone" id="phone" required />
+                <label for="phone">Telefone</label>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-next">Próximo</a>
+            </div>
+        </div>
+
+        <!-- Passo 2 do formulário: Endereço -->
+        <div class="form-step">
+            <div class="input-group">
+                <input type="text" name="cep" id="cep" required />
+                <label for="cep">CEP</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="city" id="city" required />
+                <label for="city">Cidade</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="state" id="state" required />
+                <label for="state">Estado</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="country" id="country" required />
+                <label for="country">Pais</label>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Anterior</a>
+                <a href="#" class="btn btn-next">Próximo</a>
+            </div>
+        </div>
+
+
+        <!-- Passo 3 do formulário: Endereço -->
+        <div class="form-step">
+            <div class="input-group">
+                <input type="text" name="street" id="street" required />
+                <label for="Endereço">Endereço</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="houseNumber" id="houseNumber" required />
+                <label for="houseNumber">Número da Casa</label>
+            </div>
+            <div class="input-group"> 
+                <input type="text" name="addressObservation" id="addressObservation" required/>
+                <label for="addressObservation">Observação de Endereço</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="referencePoint" id="referencePoint" required/>
+                <label for="referencePoint">Ponto de Referência</label>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Anterior</a>
+                <a href="#" class="btn btn-next">Próximo</a>
+            </div>
+        </div>
+
+        <!-- Passo 4 do formulário: Informações do Deck -->
+        <div class="form-step">
+            <div class="input-group">
+                <input type="text" name="deckType" id="deckType" required />
+                <label for="deckType">Comprimento</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="deckSize" id="deckSize" required />
+                <label for="deckSize">Largura</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="woodType" id="woodType" required  />
+                <label for="woodType">Área</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="finishType" id="finishType" required />
+                <label for="finishType">Peso</label>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Anterior</a>
+                <a href="#" class="btn btn-next">Próximo</a>
+            </div>
+        </div>
+
+        <!-- Passo 5 do formulário: Detalhes Adicionais -->
+        <div class="form-step">
+            <div class="input-group">
+                <input type="text" name="ValorProduto" id="ValorProduto" required />
+                <label for="ValorProduto">Valor do produto</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="ValorProdutoFinal" id="ValorProdutoFinal" required />
+                <label for="ValorProdutoFinal">Valor final do produto</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="frete" id="frete" required />
+                <label for="additionalNotes">Valor do frete</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="address" id="address" required />
+                <label for="address">Endereço (completo)</label>
+            </div>
+            <div id="btn-final" class="btns-group">
+                <a href="#" class="btn btn-prev">Anterior</a>
+                <input type="submit" value="Finalizar" class="btn" id="checkout"/>
+            </div>
+        </div>
+
+
+        <script src="Js/orçamento.js" defer></script>
+</body>
+
+</html>

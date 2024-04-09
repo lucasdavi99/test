@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./img/DECKLAND_LOGO-removebg-preview.png" alt="Logo do Cliente" class="logo">
+    </header>
+
+
+    <main class="main-content">
+        <section class="product-section">
+            <img src="img/1.webp" alt="Imagem do Produto" class="product-image">
+            <div class="product-details">
+                <h3 class="product-name">Nome do Produto</h3>
+                <p class="product-description">Descrição breve do produto...</p>
+                <p class="product-id">ID: 123456</p>
+                <p class="product-weight">Peso: 1kg</p>
+                <p class="product-dimensions">Dimensões: 10x20x30 cm</p>
+                <p class="product-area">Área: 2 m²</p>
+                <!-- Outros detalhes podem ser adicionados aqui -->
+            </div>
+
+        </section>
+
+        <div class="info-summary-container">
+            <section class="delivery-section">
+                <h2>Informações de Entrega</h2>
+                <form id="delivery-form">
+                    <input type="text" id="Fullname" name="Full-name" placeholder="Nome completo" required>
+                    <input type="text" id="address" name="address" placeholder="Endereço" required>
+                    <input type="text" id="city" name="city" placeholder="Cidade" required>
+                    <input type="text" id="state" name="state" placeholder="Estado" required>
+                    <input type="text" id="zip" name="zip" placeholder="CEP" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
+
+                </form>
+
+            </section>
+
+            <section class="summary-section">
+                <h2>Resumo do Pedido</h2>
+                <p id="resumoValorProduto">Valor do Produto: R$ XXX,XX</p>
+                <p id="resumoValorFrete">Valor do Frete: R$ XXX,XX</p>
+                <p id="resumoValorTotal">Total: R$ XXX,XX</p>
+
+                <div id="wallet_container"></div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script src="Js/orçamento.js"></script>
+    <script src="./Js/checkout.js"></script>
+</body>
+
+</html>
