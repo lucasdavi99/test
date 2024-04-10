@@ -49,7 +49,7 @@ app.post('/create_preference', async (req, res) => {
 
 
 // API Melhor Envio/ calculo de frete
-app.post("https://test-iota-black-60.vercel.app//api/frete", async (req, res) => {
+app.post("/api/frete", async (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
@@ -91,7 +91,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Rota para enviar e-mails com método POST
-app.post("https://test-iota-black-60.vercel.app/send-email", (req, res) => {
+app.post("/send-email", (req, res) => {
   console.log("Rota /send-email acessada");
   const {
     fullName,
