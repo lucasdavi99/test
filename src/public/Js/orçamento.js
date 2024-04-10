@@ -325,7 +325,7 @@ async function calcularFrete() {
   };
 
   try {
-    const response = await fetch('http://localhost:3000/api/frete', options);
+    const response = await fetch('/api/frete', options);
     const data = await response.json();
     return data.price;
   } catch (err) {
