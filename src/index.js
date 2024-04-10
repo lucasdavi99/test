@@ -91,7 +91,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Rota para enviar e-mails com método POST
-app.post("https://test-iota-black-60.vercel.app//send-email", (req, res) => {
+app.post("https://test-iota-black-60.vercel.app/send-email", (req, res) => {
   console.log("Rota /send-email acessada");
   const {
     fullName,
