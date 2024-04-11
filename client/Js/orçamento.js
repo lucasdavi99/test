@@ -169,7 +169,7 @@ document.querySelector(".form").addEventListener("submit", async function (event
     localStorage.setItem("checkoutData", JSON.stringify(formObject));
 
     try {
-      const respostaEmail = await fetch("/send-email", {
+      const respostaEmail = await fetch("https://test-backend-six-omega.vercel.app/send-email", {
         method: "POST",
         body: formData, // Usa FormData diretamente
       });
@@ -325,7 +325,7 @@ async function calcularFrete() {
   };
 
   try {
-    const response = await fetch('http://localhost:3000/api/frete', options);
+    const response = await fetch('https://test-backend-six-omega.vercel.app/api/frete', options);
     const data = await response.json();
     return data.price;
   } catch (err) {
