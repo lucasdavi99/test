@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       quantity: 1
     }
 
-    const response = await fetch("/create_preference", {
+    const response = await fetch("http://localhost:3000/create_preference", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

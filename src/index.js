@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(upload.none());
 app.use(express.static(path.resolve("src/public")));
 app.use(cors());
+app.get("/", (req, res) => { res.send("Hello World!"); });
 
 
 // API Mercado Pago/ criar pagamento
